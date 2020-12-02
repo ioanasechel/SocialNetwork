@@ -39,6 +39,7 @@ public class SearchController {
     UserService userService;
     FriendRequestService friendRequestService;
     MessageService messageService;
+    Stage stage;
 
     ObservableList<User> usersTableModel = FXCollections.observableArrayList();
 
@@ -53,6 +54,7 @@ public class SearchController {
 //        setVisibility();
 
         this.user = user;
+        this.stage=stage;
 
         initUserTableModel();
     }
@@ -104,20 +106,8 @@ public class SearchController {
             MessageAlert.showErrorMessage(null, "You must select a friend!");
     }
 
-    /*
-    public void handleUnfriend() throws IOException {
-        User selectedFriend = tableFriends.getSelectionModel().getSelectedItem();
-        if (selectedFriend != null) {
-            User found = userService.getOne(selectedFriend.getId());
-            Friendship deletedFriendship = friendshipService.deleteFriendship(user.getId(), found.getId());
-            if (deletedFriendship != null)
-                showMessage(
-                        null, Alert.AlertType.INFORMATION, "Unfriend", "You have unfriended " + selectedFriend.getFirstName() + " " + selectedFriend.getLastName() +"!"
-                );
-        }
-        else {
-            showErrorMessage(null, "You must select a friend!");
-        }
+    @FXML
+    private void handleBack() {
+        stage.close();
     }
-     */
 }

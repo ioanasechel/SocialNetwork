@@ -5,7 +5,7 @@
 
 <AnchorPane prefHeight="325.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.SearchController">
    <children>
-      <Button layoutX="185.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleAddFriend" text="Add friend" />
+      <Button layoutX="33.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleAddFriend" text="Add friend" />
       <Label layoutX="33.0" layoutY="37.0" prefHeight="17.0" prefWidth="52.0" text="Search:" />
       <TableView fx:id="tableAddFriends" layoutX="33.0" layoutY="76.0" prefHeight="200.0" prefWidth="225.0">
         <columns>
@@ -14,5 +14,6 @@
         </columns>
       </TableView>
       <TextField fx:id="txtSearch" layoutX="106.0" layoutY="33.0" />
+      <Button layoutX="217.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
    </children>
 </AnchorPane>

@@ -14,5 +14,6 @@
         </columns>
       </TableView>
       <TextField fx:id="txtSearch" layoutX="106.0" layoutY="33.0" />
+      <Button layoutX="41.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
    </children>
 </AnchorPane>
