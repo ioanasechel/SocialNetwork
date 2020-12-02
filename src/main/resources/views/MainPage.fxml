@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MainController">
+   <children>
+      <TextField fx:id="txtLoggedIn" layoutX="119.0" layoutY="25.0" />
+      <Label layoutX="24.0" layoutY="29.0" text="Logged in as:" />
+      <TableView fx:id="tableFriends" layoutX="24.0" layoutY="110.0" prefHeight="200.0" prefWidth="169.0">
+        <columns>
+          <TableColumn fx:id="friendFirstName" prefWidth="85.33332633972168" text="First name" />
+          <TableColumn fx:id="friendLastName" prefWidth="82.66666412353516" text="Last name" />
+        </columns>
+      </TableView>
+      <Label layoutX="24.0" layoutY="72.0" text="Friends:" />
+      <Label layoutX="211.0" layoutY="72.0" text="Friend requests:" />
+      <TableView fx:id="tableFriendsRequest" layoutX="211.0" layoutY="110.0" prefHeight="200.0" prefWidth="314.0">
+        <columns>
+          <TableColumn fx:id="requestFrom" prefWidth="105.33335876464844" text="From" />
+          <TableColumn fx:id="requestStatus" prefWidth="95.00003051757812" text="Status" />
+            <TableColumn fx:id="requestDate" prefWidth="111.66665649414062" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="24.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadSearchStage" text="Search" />
+      <Button layoutX="95.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleUnfriend" text="Remove Friend" />
+      <Button layoutX="458.0" layoutY="25.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+      <Button layoutX="211.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleAcceptRequest" text="Accept Friend Request" />
+      <Button layoutX="393.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleRejectRequest" text="Reject Friend Request" />
+   </children>
+</AnchorPane>
