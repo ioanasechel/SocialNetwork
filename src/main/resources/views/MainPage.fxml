@@ -9,8 +9,8 @@
       <Label layoutX="24.0" layoutY="29.0" text="Logged in as:" />
       <TableView fx:id="tableFriends" layoutX="24.0" layoutY="110.0" prefHeight="200.0" prefWidth="169.0">
         <columns>
-          <TableColumn fx:id="friendFirstName" prefWidth="85.33332633972168" text="First name" />
-          <TableColumn fx:id="friendLastName" prefWidth="82.66666412353516" text="Last name" />
+          <TableColumn fx:id="friendFirstName" prefWidth="85.33332633972168" text="First Name" />
+          <TableColumn fx:id="friendLastName" prefWidth="82.66666412353516" text="Last Name" />
         </columns>
       </TableView>
       <Label layoutX="24.0" layoutY="72.0" text="Friends:" />
