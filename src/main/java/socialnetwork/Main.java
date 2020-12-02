@@ -1,21 +1,5 @@
 package socialnetwork;
 
-import socialnetwork.domain.*;
-import socialnetwork.domain.validators.FriendRequestValidator;
-import socialnetwork.domain.validators.FriendsValidator;
-import socialnetwork.domain.validators.MessageValidator;
-import socialnetwork.domain.validators.UserValidator;
-import socialnetwork.repository.Repository;
-import socialnetwork.repository.file.FriendRequestFile;
-import socialnetwork.repository.file.FriendsFile;
-import socialnetwork.repository.file.MessageFile;
-import socialnetwork.repository.file.UserFile;
-import socialnetwork.service.FriendRequestService;
-import socialnetwork.service.FriendshipService;
-import socialnetwork.service.MessageService;
-import socialnetwork.service.UserService;
-import socialnetwork.ui.Ui;
-
 import java.io.IOException;
 
 public class Main {
