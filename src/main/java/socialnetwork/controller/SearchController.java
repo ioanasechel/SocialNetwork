@@ -61,8 +61,8 @@ public class SearchController {
     }
 
     private void initializeUsersTable() {
-        addFirstName.setCellValueFactory(new PropertyValueFactory<User, String>("FirstName"));
-        addLastName.setCellValueFactory(new PropertyValueFactory<User, String>("LastName"));
+        addFirstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
+        addLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
         tableAddFriends.setItems(usersTableModel);
     }
 
