@@ -7,12 +7,12 @@
    <children>
       <Button layoutX="209.0" layoutY="124.0" mnemonicParsing="false" onAction="#signIn" text="Sign in" />
       <TextField fx:id="txtId" layoutX="99.0" layoutY="81.0" />
-      <Label fx:id="lblStatus" layoutX="50.0" layoutY="40.0" text="Status" />
+      <Label fx:id="lblStatus" layoutX="50.0" layoutY="40.0" />
       <Label layoutX="45.0" layoutY="85.0" text="ID" />
       <Label layoutX="27.0" layoutY="178.0" text="First Name" />
       <Label layoutX="28.0" layoutY="215.0" text="Last Name" />
       <TextField fx:id="txtFirstName" layoutX="105.0" layoutY="174.0" />
       <TextField fx:id="txtLastName" layoutX="105.0" layoutY="211.0" />
-      <Button layoutX="209.0" layoutY="248.0" mnemonicParsing="false" onAction="#logIn" text="Log in" />
+      <Button layoutX="209.0" layoutY="248.0" mnemonicParsing="false" onAction="#signUp" text="Sign up" />
    </children>
 </AnchorPane>

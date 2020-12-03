@@ -27,7 +27,6 @@ import socialnetwork.utils.events.FriendRequestChangeEvent;
 import socialnetwork.utils.events.FriendshipChangeEvent;
 import socialnetwork.utils.observer.Observer;
 
-import javax.swing.table.TableModel;
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -64,31 +63,25 @@ public class MainController implements Observer {
     Stage stage;
     Stage previousStage;
 
-   // ObservableList<User> usersTableModel = FXCollections.observableArrayList();
     ObservableList<User> friendsTableModel = FXCollections.observableArrayList();
-    ObservableList<Message> messagesTableModel = FXCollections.observableArrayList();
-    ObservableList<FriendRequest> sentTableModel = FXCollections.observableArrayList();
     ObservableList<FriendRequest> receivedTableModel = FXCollections.observableArrayList();
 
     public void setService(UserService userService, FriendshipService friendshipService,
-                           MessageService messageService, FriendRequestService friendRequestService,
+                           MessageService messageService,
+                           FriendRequestService friendRequestService,
                            User user, Stage previousStage, Stage stage) {
         this.userService = userService;
         this.friendshipService = friendshipService;
         this.messageService = messageService;
         this.friendRequestService = friendRequestService;
         friendshipService.addObserver(this);
-//        messageService.addObserver(this);
         friendRequestService.addObserver(this);
 
         this.user = user;
         this.previousStage = previousStage;
         this.stage = stage;
 
-//        initUserTableModel();
         initFriendshipTableModel();
-//        initMessageTableModel();
-//        initSentTableModel();
         initReceivedTableModel();
 
         txtLoggedIn.setText(user.getFirstName() + " " + user.getLastName());
@@ -106,10 +99,7 @@ public class MainController implements Observer {
 
     @FXML
     public void initialize() {
-      //  initializeUserTable();
         initializeFriendsTable();
-//        initializeMessagesTable();
-//        initializeSentTable();
         initializeReceivedTable();
     }
 
@@ -142,12 +132,8 @@ public class MainController implements Observer {
         if (event instanceof FriendshipChangeEvent)
             initFriendshipTableModel();
         else if (event instanceof FriendRequestChangeEvent) {
-////            initSentTableModel();
             initReceivedTableModel();
         }
-//        }
-//        else if (event instanceof MessageChangeEvent)
-//            initMessageTableModel();
     }
 
     @FXML
@@ -184,8 +170,7 @@ public class MainController implements Observer {
     public void handleAcceptRequest() throws IOException {
         FriendRequest selectedRequest = tableFriendsRequest.getSelectionModel().getSelectedItem();
         if (selectedRequest != null) {
-            //User found = userService.getOne(selectedFriend.getId());
-            FriendRequest acceptedRequest = friendRequestService.changeStatus(selectedRequest.getId(), "yes");
+            FriendRequest acceptedRequest = friendRequestService.changeStatus(selectedRequest.getId(), true);
             if (acceptedRequest != null)
                 showMessage(
                         null, Alert.AlertType.INFORMATION, "Accept", "You have accepted the friend request from " + selectedRequest.getFrom()+"!"
@@ -200,8 +185,7 @@ public class MainController implements Observer {
     public void handleRejectRequest() throws IOException {
         FriendRequest selectedRequest = tableFriendsRequest.getSelectionModel().getSelectedItem();
         if (selectedRequest != null) {
-            //User found = userService.getOne(selectedFriend.getId());
-            FriendRequest acceptedRequest = friendRequestService.changeStatus(selectedRequest.getId(), "no");
+            FriendRequest acceptedRequest = friendRequestService.changeStatus(selectedRequest.getId(), false);
             if (acceptedRequest != null)
                 showMessage(
                         null, Alert.AlertType.INFORMATION, "Accept", "You have rejected the friend request from " + selectedRequest.getFrom()+"!"

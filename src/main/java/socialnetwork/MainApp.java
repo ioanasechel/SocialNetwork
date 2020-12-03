@@ -42,10 +42,6 @@ public class MainApp extends Application {
         String fileNameFriendships="data/friendship.csv";
         String fileNameMessages="data/messages.csv";
         String fileNameFriendRequests="data/friendRequest.csv";
-        //        String UserFile="data/users.csv";
-//        String FriendshipFile="data/friendship.csv";
-//        String MessageFile="data/messages.csv";
-//        String FriendRequestFile="data/friendRequest.csv";
 
         userFileRepository = new UserFile(fileNameUsers, new UserValidator());
         friendshipFileRepository = new FriendsFile(fileNameFriendships, new FriendsValidator());
@@ -70,6 +66,5 @@ public class MainApp extends Application {
 
         LogInController loginController = loader.getController();
         loginController.setService(userService, friendshipService, messageService, friendRequestService, primaryStage);
-        //loginController.setService(userService, primaryStage);
     }
 }

@@ -1,7 +1,6 @@
 package socialnetwork.service;
 
 import socialnetwork.domain.*;
-import socialnetwork.domain.validators.AbsentObjectException;
 import socialnetwork.domain.validators.ValidationException;
 import socialnetwork.repository.Repository;
 import socialnetwork.utils.events.ChangeFriendRequestEventType;
@@ -60,7 +59,7 @@ public class FriendRequestService implements Observable {
      * @return the friend request
      * @throws IOException if status is different than 'pending'
      */
-    public FriendRequest changeStatus(Long id, String status) throws IOException {
+    public FriendRequest changeStatus(Long id, Boolean status) throws IOException {
         FriendRequest fr=repoFriendReguest.findOne(id);
         if (!fr.getStatus().equals("pending"))
             throw new ValidationException("This friend request has been accepted or deleted");
@@ -73,7 +72,7 @@ public class FriendRequestService implements Observable {
         e.printStackTrace();
         }
 
-        if (status.equals("yes")){
+        if (status){
             FriendRequest friendRequest=new FriendRequest(userFrom, userTo, "approved", LocalDateTime.now());
             serviceFriends.addFriendship(userFrom.getId(), userTo.getId());
             friendRequest.setId(id);
@@ -129,24 +128,7 @@ public class FriendRequestService implements Observable {
     }
 
     public List<FriendRequest> getAllFriendRequestsOfAnUser(Long id) {
-//        List<FriendRequest> all= (List<FriendRequest>) getAllFriendRequest();
-//        List<FriendRequest> rez=new ArrayList<>();
-//        for(FriendRequest fr:all){
-//            if (fr.getFrom().getId()==id)
-//                rez.add(fr);
-//        }
-//        return rez;
         User user = repoUser.findOne(id);
-//        if (user == null)
-//            throw new AbsentObjectException("This user does not exist!\n");
-
-        /*List<FriendRequest> friendRequestList = new ArrayList<FriendRequest>();
-        for (FriendRequest fr : friendRequestRepository.findAll()) {
-            if (fr.getTo() == user && fr.getStatus() == "pending")
-                friendRequestList.add(fr);
-        }
-        return friendRequestList;*/
-
         return StreamSupport.stream(repoFriendReguest.findAll().spliterator(), false)
                 .filter(fr -> fr.getTo() == user)
                 .filter(fr -> fr.getStatus().equals("pending"))

@@ -11,12 +11,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import socialnetwork.domain.FriendRequest;
 import socialnetwork.domain.User;
-import socialnetwork.domain.validators.AbsentObjectException;
-import socialnetwork.domain.validators.ValidationException;
 import socialnetwork.service.FriendRequestService;
 import socialnetwork.service.MessageService;
 import socialnetwork.service.UserService;
-import socialnetwork.utils.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,15 +40,13 @@ public class SearchController {
 
     ObservableList<User> usersTableModel = FXCollections.observableArrayList();
 
-    public void setService(User user, UserService userService, MessageService messageService, FriendRequestService friendRequestService, Stage stage) {
+    public void setService(User user, UserService userService,
+                           MessageService messageService,
+                           FriendRequestService friendRequestService, Stage stage) {
         this.user = user;
         this.userService = userService;
         this.friendRequestService = friendRequestService;
         this.messageService = messageService;
-//        this.dialogStage = stage;
-//        this.event = event;
- //       friendRequestService.addObserver((Observer) this);
-//        setVisibility();
 
         this.user = user;
         this.stage=stage;
@@ -74,14 +69,18 @@ public class SearchController {
     private void initUserTableModel() {
         Iterable<User> users = userService.getAllUsers();
         List<User> all=new ArrayList<>();
-        users.forEach(user->{all.add(user);});
+        users.forEach(user1->{
+            if (user1.getId()!=user.getId())
+                all.add(user1);});
         usersTableModel.setAll(all);
     }
 
     public void handleserchField () {
         Iterable<User> users = userService.getAllUsers();
         List<User> all=new ArrayList<>();
-        users.forEach(user->{all.add(user);});
+        users.forEach(user1->{
+            if (user1.getId()!=user.getId())
+                all.add(user1);});
         usersTableModel.setAll( StreamSupport.stream(all.spliterator(), false)
                 .filter(x->{
                     String nume_user = txtSearch.getText();

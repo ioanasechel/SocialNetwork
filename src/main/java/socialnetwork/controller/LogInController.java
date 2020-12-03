@@ -82,7 +82,7 @@ public class LogInController {
     }
 
     @FXML
-    public void logIn() throws IOException{
+    public void signUp() throws IOException{
         if (txtFirstName.getText().length()!=0 ||
             txtLastName.getText().length()!=0) {
             createUser();
