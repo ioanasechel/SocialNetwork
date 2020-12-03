@@ -105,8 +105,8 @@ public class MainController implements Observer {
 
 
     private void initializeFriendsTable() {
-        friendFirstName.setCellValueFactory(new PropertyValueFactory<User, String>("FirstName"));
-        friendLastName.setCellValueFactory(new PropertyValueFactory<User, String>("LastName"));
+        friendFirstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
+        friendLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
         tableFriends.setItems(friendsTableModel);
     }
 
@@ -116,9 +116,9 @@ public class MainController implements Observer {
     }
 
     private void initializeReceivedTable() {
-        requestFrom.setCellValueFactory(new PropertyValueFactory<FriendRequest, String>("StringFrom"));
-        requestStatus.setCellValueFactory(new PropertyValueFactory<FriendRequest, String>("Status"));
-        requestDate.setCellValueFactory(new PropertyValueFactory<FriendRequest, String>("StringDate"));
+        requestFrom.setCellValueFactory(new PropertyValueFactory<>("StringFrom"));
+        requestStatus.setCellValueFactory(new PropertyValueFactory<>("Status"));
+        requestDate.setCellValueFactory(new PropertyValueFactory<>("StringDate"));
         tableFriendsRequest.setItems(receivedTableModel);
     }
 

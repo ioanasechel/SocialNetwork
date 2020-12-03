@@ -70,7 +70,7 @@ public class LogInController {
             stage.close();
         }
         else {
-            lblStatus.setText("Login failed");
+            lblStatus.setText("Sign in failed");
             lblStatus.setTextFill(Color.web("#ba170b"));
         }
     }
@@ -90,7 +90,7 @@ public class LogInController {
             stage.close();
         }
         else {
-            lblStatus.setText("Login failed");
+            lblStatus.setText("Sign up failed");
             lblStatus.setTextFill(Color.web("#ba170b"));
        }
     }

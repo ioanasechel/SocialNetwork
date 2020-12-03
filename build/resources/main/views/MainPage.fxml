@@ -2,19 +2,26 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MainController">
    <children>
-      <TextField fx:id="txtLoggedIn" layoutX="119.0" layoutY="25.0" />
-      <Label layoutX="24.0" layoutY="29.0" text="Logged in as:" />
+      <TextField fx:id="txtLoggedIn" layoutX="219.0" layoutY="25.0" />
+      <Label layoutX="123.0" layoutY="29.0" text="Logged in as:" />
       <TableView fx:id="tableFriends" layoutX="24.0" layoutY="110.0" prefHeight="200.0" prefWidth="169.0">
         <columns>
           <TableColumn fx:id="friendFirstName" prefWidth="85.33332633972168" text="First Name" />
           <TableColumn fx:id="friendLastName" prefWidth="82.66666412353516" text="Last Name" />
         </columns>
       </TableView>
-      <Label layoutX="24.0" layoutY="72.0" text="Friends:" />
-      <Label layoutX="211.0" layoutY="72.0" text="Friend requests:" />
+      <Label layoutX="86.0" layoutY="81.0" text="Friends">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="316.0" layoutY="81.0" text="Friend Requests">
+         <font>
+             <Font name="System Bold" size="14.0" />
+         </font></Label>
       <TableView fx:id="tableFriendsRequest" layoutX="211.0" layoutY="110.0" prefHeight="200.0" prefWidth="314.0">
         <columns>
           <TableColumn fx:id="requestFrom" prefWidth="105.33335876464844" text="From" />
@@ -22,10 +29,10 @@
             <TableColumn fx:id="requestDate" prefWidth="111.66665649414062" text="Date" />
         </columns>
       </TableView>
-      <Button layoutX="24.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadSearchStage" text="Search" />
-      <Button layoutX="95.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleUnfriend" text="Remove Friend" />
-      <Button layoutX="458.0" layoutY="25.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
-      <Button layoutX="211.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleAcceptRequest" text="Accept Friend Request" />
-      <Button layoutX="393.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleRejectRequest" text="Reject Friend Request" />
+      <Button layoutX="34.0" layoutY="343.0" mnemonicParsing="false" onAction="#loadSearchStage" text="Search" />
+      <Button layoutX="97.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleUnfriend" text="Remove Friend" />
+      <Button layoutX="467.0" layoutY="25.0" mnemonicParsing="false" onAction="#logOut" text="Log out" />
+      <Button layoutX="225.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleAcceptRequest" text="Accept Friend Request" />
+      <Button layoutX="376.0" layoutY="343.0" mnemonicParsing="false" onAction="#handleRejectRequest" text="Reject Friend Request" />
    </children>
 </AnchorPane>
