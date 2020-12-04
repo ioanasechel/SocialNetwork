@@ -3,11 +3,14 @@ package socialnetwork.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import socialnetwork.domain.FriendRequest;
 import socialnetwork.domain.User;
@@ -15,6 +18,7 @@ import socialnetwork.service.FriendRequestService;
 import socialnetwork.service.MessageService;
 import socialnetwork.service.UserService;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -95,7 +99,7 @@ public class SearchController {
     private void handleAddFriend() {
         User selectedUser = tableAddFriends.getSelectionModel().getSelectedItem();
         if (selectedUser != null) {
-            FriendRequest fr = friendRequestService.addFriendRequest(user.getId(), selectedUser.getId());
+            FriendRequest fr = friendRequestService.sendFriendRequest(user.getId(), selectedUser.getId());
             if (fr == null)
                 MessageAlert.showMessage(
                         null, Alert.AlertType.INFORMATION, "Add friend", "You have sent a friend request to " + selectedUser.getFirstName() + " " + selectedUser.getLastName() + "!"
@@ -106,7 +110,33 @@ public class SearchController {
     }
 
     @FXML
+    private void handleSendMessage() throws IOException {
+        User selectedUser = tableAddFriends.getSelectionModel().getSelectedItem();
+        if (selectedUser != null) {
+            loadMessageStage(selectedUser);
+        }
+        else
+            MessageAlert.showErrorMessage(null, "You must select a friend!");
+    }
+
+    @FXML
     private void handleBack() {
         stage.close();
     }
+
+    @FXML
+    private void loadMessageStage(User toCommunicate) throws IOException {
+        Stage newStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/views/MessagePage.fxml"));
+        AnchorPane layout = loader.load();
+        newStage.setScene(new Scene(layout));
+
+        MessageController messageController = loader.getController();
+        messageController.setService(messageService, user, toCommunicate, newStage);
+
+        newStage.show();
+    }
+
+
 }

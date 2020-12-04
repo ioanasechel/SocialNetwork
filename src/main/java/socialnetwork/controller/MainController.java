@@ -5,9 +5,8 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
@@ -17,14 +16,11 @@ import socialnetwork.domain.FriendRequest;
 import socialnetwork.domain.Friendship;
 import socialnetwork.domain.Message;
 import socialnetwork.domain.User;
-import socialnetwork.domain.validators.AbsentObjectException;
 import socialnetwork.service.FriendRequestService;
 import socialnetwork.service.FriendshipService;
 import socialnetwork.service.MessageService;
 import socialnetwork.service.UserService;
 import socialnetwork.utils.events.Event;
-import socialnetwork.utils.events.FriendRequestChangeEvent;
-import socialnetwork.utils.events.FriendshipChangeEvent;
 import socialnetwork.utils.observer.Observer;
 
 import java.io.IOException;
@@ -47,13 +43,9 @@ public class MainController implements Observer {
     private TableColumn<User, String> friendLastName;
 
     @FXML
-    private TableView<FriendRequest> tableFriendsRequest;
+    private Button idButtonRequest;
     @FXML
-    private TableColumn<FriendRequest, String> requestFrom;
-    @FXML
-    private TableColumn<FriendRequest, String> requestStatus;
-    @FXML
-    private TableColumn<FriendRequest, String> requestDate;
+    private Button idButtonMessage;
 
     User user;
     UserService userService;
@@ -64,7 +56,6 @@ public class MainController implements Observer {
     Stage previousStage;
 
     ObservableList<User> friendsTableModel = FXCollections.observableArrayList();
-    ObservableList<FriendRequest> receivedTableModel = FXCollections.observableArrayList();
 
     public void setService(UserService userService, FriendshipService friendshipService,
                            MessageService messageService,
@@ -75,14 +66,13 @@ public class MainController implements Observer {
         this.messageService = messageService;
         this.friendRequestService = friendRequestService;
         friendshipService.addObserver(this);
-        friendRequestService.addObserver(this);
 
         this.user = user;
         this.previousStage = previousStage;
         this.stage = stage;
 
         initFriendshipTableModel();
-        initReceivedTableModel();
+        notifications();
 
         txtLoggedIn.setText(user.getFirstName() + " " + user.getLastName());
         txtLoggedIn.setEditable(false);
@@ -100,7 +90,6 @@ public class MainController implements Observer {
     @FXML
     public void initialize() {
         initializeFriendsTable();
-        initializeReceivedTable();
     }
 
 
@@ -115,25 +104,36 @@ public class MainController implements Observer {
         friendsTableModel.setAll(userFriends);
     }
 
-    private void initializeReceivedTable() {
-        requestFrom.setCellValueFactory(new PropertyValueFactory<>("StringFrom"));
-        requestStatus.setCellValueFactory(new PropertyValueFactory<>("Status"));
-        requestDate.setCellValueFactory(new PropertyValueFactory<>("StringDate"));
-        tableFriendsRequest.setItems(receivedTableModel);
+
+    private void notifications(){
+        List<FriendRequest> friendRequests = friendRequestService.getAllFriendRequestsOfAnUser(user.getId());
+        if (friendRequests.size()!=0)
+        {
+            idButtonRequest.setDisable(false);
+            idButtonRequest.setManaged(true);
+        }
+        else{
+            idButtonRequest.setDisable(true);
+            idButtonRequest.setManaged(false);
+        }
+
+//        Iterable<Message> allMessages=messageService.getAllMessages();
+        List<Message> all=messageService.getNotificationMessage(user.getId());
+        if (all.size()>0)
+        {
+            idButtonMessage.setDisable(false);
+            idButtonMessage.setManaged(true);
+        }
+        else{
+            idButtonMessage.setDisable(true);
+            idButtonMessage.setManaged(false);
+        }
     }
 
-    private void initReceivedTableModel() {
-        List<FriendRequest> friendRequests = friendRequestService.getAllFriendRequestsOfAnUser(user.getId());
-        receivedTableModel.setAll(friendRequests);
-    }
 
     @Override
     public void update(Event event) {
-        if (event instanceof FriendshipChangeEvent)
             initFriendshipTableModel();
-        else if (event instanceof FriendRequestChangeEvent) {
-            initReceivedTableModel();
-        }
     }
 
     @FXML
@@ -167,32 +167,51 @@ public class MainController implements Observer {
     }
 
     @FXML
-    public void handleAcceptRequest() throws IOException {
-        FriendRequest selectedRequest = tableFriendsRequest.getSelectionModel().getSelectedItem();
-        if (selectedRequest != null) {
-            FriendRequest acceptedRequest = friendRequestService.changeStatus(selectedRequest.getId(), true);
-            if (acceptedRequest != null)
-                showMessage(
-                        null, Alert.AlertType.INFORMATION, "Accept", "You have accepted the friend request from " + selectedRequest.getFrom()+"!"
-                );
-        }
-        else {
-            showErrorMessage(null, "You must select a request!");
-        }
+    private void loadNotificationRequestStage() throws IOException {
+        Stage newStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/views/NotificationRequestPage.fxml"));
+        AnchorPane layout = loader.load();
+        newStage.setScene(new Scene(layout));
+
+        NotificationRequestController requestController = loader.getController();
+        requestController.setService(friendRequestService, user, newStage);
+
+        newStage.show();
     }
 
     @FXML
-    public void handleRejectRequest() throws IOException {
-        FriendRequest selectedRequest = tableFriendsRequest.getSelectionModel().getSelectedItem();
-        if (selectedRequest != null) {
-            FriendRequest acceptedRequest = friendRequestService.changeStatus(selectedRequest.getId(), false);
-            if (acceptedRequest != null)
-                showMessage(
-                        null, Alert.AlertType.INFORMATION, "Accept", "You have rejected the friend request from " + selectedRequest.getFrom()+"!"
-                );
-        }
-        else {
-            showErrorMessage(null, "You must select a request!");
-        }
+    private void loadNotificationMessageStage() throws IOException {
+        Stage newStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/views/NotificationMessagePage.fxml"));
+        AnchorPane layout = loader.load();
+        newStage.setScene(new Scene(layout));
+
+        NotificationMessageController messageController = loader.getController();
+        messageController.setService(messageService, user, newStage);
+
+        newStage.show();
     }
+
+    @FXML
+    private void loadUnsentStage() throws IOException {
+        Stage newStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/views/UnsentPage.fxml"));
+        AnchorPane layout = loader.load();
+        newStage.setScene(new Scene(layout));
+
+        UnsentController unsentController = loader.getController();
+        unsentController.setService(friendRequestService, user, newStage);
+
+        newStage.show();
+    }
+
+    @FXML
+    private void handleRefresh(){
+        notifications();
+    }
+
+
 }

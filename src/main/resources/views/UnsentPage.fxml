@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="299.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.UnsentController">
+   <children>
+      <Button layoutX="27.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+      <Button layoutX="287.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleUnsent" text="Unsent" />
+      <TableView fx:id="tableSent" layoutX="27.0" layoutY="29.0" prefHeight="200.0" prefWidth="314.0">
+        <columns>
+          <TableColumn fx:id="sentTo" prefWidth="107.3333511352539" text="To" />
+          <TableColumn fx:id="sentStatus" prefWidth="84.66664123535156" text="Status" />
+            <TableColumn fx:id="sentDate" prefWidth="120.99996948242188" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

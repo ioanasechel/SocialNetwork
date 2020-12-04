@@ -68,6 +68,23 @@ public class Message extends Entity<Long>{
         return rez.toString();
     }
 
+    private String printListToString(){
+        StringBuilder rez= new StringBuilder();
+        to.forEach(user->{
+            rez.append(user.getFirstName()+" "+user.getLastName()+"\n");
+        });
+        return rez.toString();
+    }
+
+    public String getStringMessage(){
+        if (to.size()==1)
+        return from.getFirstName() + " " + from.getLastName()+
+                ": " + message;
+        else
+            return from.getFirstName() + " " + from.getLastName()+
+                    ": " + message + "\n" + "received by: " + printListToString();
+    }
+
     /**
      * print
      * @return a string with all users with their friends

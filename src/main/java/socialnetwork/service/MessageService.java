@@ -4,13 +4,18 @@ import socialnetwork.domain.Message;
 import socialnetwork.domain.ReplyMessage;
 import socialnetwork.domain.User;
 import socialnetwork.repository.Repository;
+import socialnetwork.utils.Constants;
+import socialnetwork.utils.events.*;
+import socialnetwork.utils.observer.Observable;
+import socialnetwork.utils.observer.Observer;
 
+import javax.swing.event.ChangeEvent;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class MessageService {
+public class MessageService implements Observable {
 
     private Repository<Long, Message> repoMessage;
     private Repository<Long, User> repoUser;
@@ -43,6 +48,8 @@ public class MessageService {
         Message message=new Message(userFrom, usersTo, messageString, LocalDateTime.now());
         message.setId(generateUserId());
         Message rez=repoMessage.save(message);
+        notifyObservers(new MessageChangeEvent(ChangeMessageEventType.SEND, rez));
+
         return rez;
     }
 
@@ -60,8 +67,8 @@ public class MessageService {
         to.add(toAnswer.getFrom());
         ReplyMessage reply=new ReplyMessage(toAnswer,user, to, messageString, LocalDateTime.now());
         reply.setId(generateUserId());
-        //System.out.println(reply.toString());
         Message rez=repoMessage.save(reply);
+        notifyObservers(new MessageChangeEvent(ChangeMessageEventType.SEND, rez));
         return rez;
     }
 
@@ -84,6 +91,7 @@ public class MessageService {
         ReplyMessage reply=new ReplyMessage(toAnswer,user, to, messageString, LocalDateTime.now());
         reply.setId(generateUserId());
         Message rez=repoMessage.save(reply);
+        notifyObservers(new MessageChangeEvent(ChangeMessageEventType.SEND, rez));
         return rez;
     }
 
@@ -135,5 +143,51 @@ public class MessageService {
                 return (long) i;
         }
         return (long) repoMessage.count() + 1;
+    }
+
+    private List<Observer> observers = new ArrayList<>();
+
+    @Override
+    public void addObserver(Observer e) {
+        observers.add(e);
+    }
+
+    @Override
+    public void removeObserver(Observer e) {
+        observers.remove(e);
+    }
+
+    @Override
+    public void notifyObservers(Event t) {
+        observers.stream().forEach(x->x.update(t));
+    }
+
+    public List<Message> getNotificationMessage(Long id) {
+        User user = repoUser.findOne(id);
+        Iterable<Message> allMessages = getAllMessages();
+        List<Message> all = new ArrayList<>();
+        List<Message> rez = new ArrayList<>();
+        allMessages.forEach(message -> {
+            all.add(message);
+        });
+        all.sort(Comparator.comparing(Message::getData));
+        LocalDateTime date = null;
+        for (Message message : all) { //salvez data la care el trimite ultimul mesaj
+            if (message.getFrom() == user) {
+                date = message.getData();
+                //rez.add(message);
+            }
+        }
+        System.out.println(date);
+        //salvez mesajele care sunt trimise dupa data la care a trimis userul
+        //user ultimul mesaj pt ca acelea sunt mesajele pe care nu le-a citi
+        for (Message message : all) {
+            for(User userTo: message.getTo())
+                if (userTo == user && message.getData().isAfter(date)) {
+                    rez.add(message);
+            }
+        }
+
+        return rez;
     }
 }

@@ -2,7 +2,7 @@ package socialnetwork.utils.events;
 
 import socialnetwork.domain.FriendRequest;
 
-public class FriendRequestChangeEvent implements Event {
+    public class FriendRequestChangeEvent implements Event {
     private ChangeFriendRequestEventType type;
     private FriendRequest data;
 

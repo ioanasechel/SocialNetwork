@@ -42,7 +42,7 @@ public class FriendRequestService implements Observable {
      * @param idTo the user who receive the friend request
      * @return the friend request
      */
-    public FriendRequest addFriendRequest(Long idFrom, Long idTo){
+    public FriendRequest sendFriendRequest(Long idFrom, Long idTo){
         User userFrom=repoUser.findOne(idFrom);
         User userTo=repoUser.findOne(idTo);
         FriendRequest friendRequest=new FriendRequest(userFrom, userTo, "pending", LocalDateTime.now());
@@ -52,14 +52,35 @@ public class FriendRequestService implements Observable {
         return saved;
     }
 
+    public FriendRequest unsentFriendRequest(Long id){
+        FriendRequest fr=repoFriendReguest.findOne(id);
+        if (!fr.getStatus().equals("pending"))
+            throw new ValidationException("This friend request has been accepted or deleted");
+        User userFrom=fr.getFrom();
+        User userTo=fr.getTo();
+        try{
+            FriendRequest removed=repoFriendReguest.delete(id);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        FriendRequest friendRequest = new FriendRequest(userFrom, userTo, "unsent", LocalDateTime.now());
+        friendRequest.setId(id);
+        FriendRequest unsent=repoFriendReguest.save(friendRequest);
+        notifyObservers(new FriendRequestChangeEvent(ChangeFriendRequestEventType.UNSENT, unsent));
+        return unsent;
+
+
+    }
+
     /**
      * change the status of a friend request
      * @param id the friend request id
      * @param status the friend request id
      * @return the friend request
-     * @throws IOException if status is different than 'pending'
      */
-    public FriendRequest changeStatus(Long id, Boolean status) throws IOException {
+    public FriendRequest changeStatus(Long id, Boolean status){
         FriendRequest fr=repoFriendReguest.findOne(id);
         if (!fr.getStatus().equals("pending"))
             throw new ValidationException("This friend request has been accepted or deleted");
@@ -110,7 +131,7 @@ public class FriendRequestService implements Observable {
         return (long) repoFriendReguest.count() + 1;
     }
 
-    private List<Observer> observers = new ArrayList<Observer>();
+    private List<Observer> observers = new ArrayList<>();
 
     @Override
     public void addObserver(Observer e) {
@@ -131,6 +152,15 @@ public class FriendRequestService implements Observable {
         User user = repoUser.findOne(id);
         return StreamSupport.stream(repoFriendReguest.findAll().spliterator(), false)
                 .filter(fr -> fr.getTo() == user)
+                .filter(fr -> fr.getStatus().equals("pending"))
+                .collect(Collectors.toList());
+
+    }
+
+    public List<FriendRequest> getAllFriendRequestsSentOfAnUser(Long id) {
+        User user = repoUser.findOne(id);
+        return StreamSupport.stream(repoFriendReguest.findAll().spliterator(), false)
+                .filter(fr -> fr.getFrom() == user)
                 .filter(fr -> fr.getStatus().equals("pending"))
                 .collect(Collectors.toList());
 
