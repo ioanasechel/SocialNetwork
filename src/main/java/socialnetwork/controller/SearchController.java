@@ -34,8 +34,6 @@ public class SearchController {
     private TableView<User> tableAddFriends;
     @FXML
     private TableColumn<User, String> addFirstName;
-    @FXML
-    private TableColumn<User, String> addLastName;
 
     User user;
     UserService userService;
@@ -52,8 +50,6 @@ public class SearchController {
         this.userService = userService;
         this.friendRequestService = friendRequestService;
         this.messageService = messageService;
-
-        this.user = user;
         this.stage=stage;
 
         initUserTableModel();
@@ -62,7 +58,7 @@ public class SearchController {
     @FXML
     public void initialize() {
         initializeUsersTable();
-        txtSearch.textProperty().addListener((x)->handleserchField());
+        txtSearch.textProperty().addListener((x)-> handleSearchField());
     }
 
     private void initializeUsersTable() {
@@ -75,21 +71,22 @@ public class SearchController {
         Iterable<User> users = userService.getAllUsers();
         List<User> all=new ArrayList<>();
         users.forEach(user1->{
-            if (user1.getId()!=user.getId())
+            if (!user1.getId().equals(user.getId()))
                 all.add(user1);});
         usersTableModel.setAll(all);
     }
 
-    public void handleserchField () {
+    public void handleSearchField() {
         Iterable<User> users = userService.getAllUsers();
         List<User> all=new ArrayList<>();
         users.forEach(user1->{
-            if (user1.getId()!=user.getId())
-                all.add(user1);});
+            if (!user1.getId().equals(user.getId()))
+                all.add(user1);
+        });
         usersTableModel.setAll( StreamSupport.stream(all.spliterator(), false)
                 .filter(x->{
-                    String nume_user = txtSearch.getText();
-                    return x.getFirstName().startsWith(nume_user);
+                    String userFirstName = txtSearch.getText();
+                    return x.getFirstName().startsWith(userFirstName);
                 })
                 .collect(Collectors.toList())
         );

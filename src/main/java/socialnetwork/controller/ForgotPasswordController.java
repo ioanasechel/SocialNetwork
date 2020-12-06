@@ -2,7 +2,6 @@ package socialnetwork.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import socialnetwork.domain.User;
@@ -32,7 +31,8 @@ public class ForgotPasswordController {
     public User getUser() {
         Iterable<User> users=userService.getAllUsers();
         List<User> all=new ArrayList<>();
-        users.forEach(user->{all.add(user);});
+        for (User user:users)
+            all.add(user);
         for(User user:all)
             if (user.getUsername().equals(txtUsername.getText())) {
                 this.user = user;

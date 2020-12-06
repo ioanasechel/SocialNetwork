@@ -3,25 +3,18 @@ package socialnetwork.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import socialnetwork.domain.FriendRequest;
-import socialnetwork.domain.Friendship;
 import socialnetwork.domain.Message;
 import socialnetwork.domain.User;
 import socialnetwork.service.MessageService;
 import socialnetwork.utils.events.Event;
 import socialnetwork.utils.observer.Observer;
 
-import java.io.IOException;
 import java.util.List;
 
 import static socialnetwork.controller.MessageAlert.showErrorMessage;
-import static socialnetwork.controller.MessageAlert.showMessage;
 
 public class MessageController implements Observer {
 
@@ -88,8 +81,7 @@ public class MessageController implements Observer {
         Message selectedMessage = tableMessage.getSelectionModel().getSelectedItem();
         if (selectedMessage != null) {
             String replyMessage= txtReply.getText();
-            Message toReply = messageService.replyMessage(selectedMessage.getId(),
-                    user.getId(), replyMessage);
+            messageService.replyMessage(selectedMessage.getId(), user.getId(), replyMessage);
         } else {
             showErrorMessage(stage, "You must select a message!");
         }
@@ -103,7 +95,7 @@ public class MessageController implements Observer {
             idButtonReply.setManaged(true);
             idButtonReplyAll.setDisable(false);
             idButtonReplyAll.setManaged(true);
-            //idButon.setText("New friend request");
+
         }
         else{
             idButtonReply.setDisable(true);
@@ -114,12 +106,11 @@ public class MessageController implements Observer {
     }
 
     @FXML
-    public void handeReplyAll(){
+    public void handleReplyAll(){
         Message selectedMessage = tableMessage.getSelectionModel().getSelectedItem();
         if (selectedMessage != null) {
             String replyMessage= txtReply.getText();
-            Message toReply = messageService.replyAll(selectedMessage.getId(),
-                    user.getId(), replyMessage);
+            messageService.replyAll(selectedMessage.getId(), user.getId(), replyMessage);
         } else {
             showErrorMessage(stage, "You must select a message!");
         }

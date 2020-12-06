@@ -11,12 +11,7 @@ import javafx.stage.Stage;
 import socialnetwork.domain.FriendRequest;
 import socialnetwork.domain.User;
 import socialnetwork.service.FriendRequestService;
-import socialnetwork.service.FriendshipService;
-import socialnetwork.service.MessageService;
-import socialnetwork.service.UserService;
 import socialnetwork.utils.events.Event;
-import socialnetwork.utils.events.FriendRequestChangeEvent;
-import socialnetwork.utils.events.FriendshipChangeEvent;
 import socialnetwork.utils.observer.Observer;
 
 import java.util.List;

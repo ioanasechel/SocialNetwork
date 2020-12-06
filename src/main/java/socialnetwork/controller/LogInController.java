@@ -61,12 +61,12 @@ public class LogInController {
         loader.setLocation(getClass().getResource("/views/MainPage.fxml"));
         AnchorPane layout = loader.load();
         newStage.setScene(new Scene(layout));
-
-        MainController mainController = loader.getController();
-        mainController.setService(userService, friendshipService, messageService, friendRequestService, user, stage, newStage);
         newStage.setTitle("MeetLy");
         newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
+
+        MainController mainController = loader.getController();
+        mainController.setService(userService, friendshipService, messageService, friendRequestService, user, newStage);
     }
 
     @FXML
@@ -93,7 +93,7 @@ public class LogInController {
         newStage.setScene(new Scene(layout));
 
         SignUpController signUpController = loader.getController();
-        signUpController.setService(userService, stage);
+        signUpController.setService(userService, newStage);
         newStage.setTitle("MeetLy");
         newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();

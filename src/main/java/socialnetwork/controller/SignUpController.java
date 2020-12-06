@@ -43,6 +43,14 @@ public class SignUpController {
         this.user = user;
     }
 
+    public void clearFields(){
+        txtFirstName.setText("");
+        txtLastName.setText("");
+        txtUsername.setText("");
+        txtPassword.setText("");
+        txtConfirmPassword.setText("");
+    }
+
     public String checkTextFields(){
         String ok="";
         if (txtFirstName.getText().length()==0)
@@ -60,7 +68,8 @@ public class SignUpController {
 
         Iterable<User> users=userService.getAllUsers();
         List<User> all=new ArrayList<>();
-        users.forEach(user->{all.add(user);});
+        for(User user:users)
+            all.add(user);
         for(User user:all)
             if (user.getUsername().equals(txtUsername.getText())) {
                 ok += "This username is already used \n";
@@ -77,6 +86,7 @@ public class SignUpController {
             showMessage(
                     stage, Alert.AlertType.INFORMATION, "Congratulation", "You have successfully registered! "
             );
+            clearFields();
         }
         else {
             if(ok.equals("Password mismatch \n")){

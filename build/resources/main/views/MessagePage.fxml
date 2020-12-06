@@ -17,7 +17,7 @@
         </columns>
       </TableView>
       <Button fx:id="idButtonReply" layoutX="-1.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleReply" prefHeight="25.0" prefWidth="167.0" style="-fx-background-color: #708a81;" text="Reply" textFill="#2b2129" />
-      <Button fx:id="idButtonReplyAll" layoutX="166.0" layoutY="289.0" mnemonicParsing="false" onAction="#handeReplyAll" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: #708a81;" text="Reply all" />
+      <Button fx:id="idButtonReplyAll" layoutX="166.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleReplyAll" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: #708a81;" text="Reply all" />
       <Button layoutX="236.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleSendMessage" prefHeight="47.0" prefWidth="88.0" style="-fx-background-color: #c2956e;" text="Send" />
    </children>
 </AnchorPane>
