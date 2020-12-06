@@ -64,6 +64,7 @@ public class MainApp extends Application {
         AnchorPane layout = loader.load();
         primaryStage.setScene(new Scene(layout));
 
+        primaryStage.setTitle("MeetLy");
         LogInController loginController = loader.getController();
         loginController.setService(userService, friendshipService, messageService, friendRequestService, primaryStage);
     }

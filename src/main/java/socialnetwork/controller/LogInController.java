@@ -66,7 +66,7 @@ public class LogInController {
 
         MainController mainController = loader.getController();
         mainController.setService(userService, friendshipService, messageService, friendRequestService, user, stage, newStage);
-
+        newStage.setTitle("MeetLy");
         newStage.show();
     }
 
@@ -95,7 +95,7 @@ public class LogInController {
 
         SignUpController signUpController = loader.getController();
         signUpController.setService(userService);
-
+        newStage.setTitle("MeetLy");
         newStage.show();
     }
 
@@ -109,7 +109,7 @@ public class LogInController {
 
         ForgotPasswordController forgotPasswordController = loader.getController();
         forgotPasswordController.setService(userService);
-
+        newStage.setTitle("MeetLy");
         newStage.show();
     }
 }

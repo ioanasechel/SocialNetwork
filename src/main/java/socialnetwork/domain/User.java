@@ -48,6 +48,10 @@ public class User extends Entity<Long>{
         return password;
     }
 
+    public String getStringUser(){
+        return "\t" + firstName + " " + lastName;
+    }
+
     /**
      * @return the friends list
      */

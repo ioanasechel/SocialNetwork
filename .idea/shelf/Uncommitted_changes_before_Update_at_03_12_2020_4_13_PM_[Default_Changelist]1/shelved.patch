@@ -1,0 +1,26 @@
+Index: build/resources/main/views/SearchPage.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.layout.*?>\r\n\r\n<AnchorPane prefHeight=\"325.0\" prefWidth=\"293.0\" xmlns=\"http://javafx.com/javafx/11.0.1\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"socialnetwork.controller.SearchController\">\r\n   <children>\r\n      <Button layoutX=\"185.0\" layoutY=\"285.0\" mnemonicParsing=\"false\" onAction=\"#handleAddFriend\" text=\"Add friend\" />\r\n      <Label layoutX=\"33.0\" layoutY=\"37.0\" prefHeight=\"17.0\" prefWidth=\"52.0\" text=\"Search:\" />\r\n      <TableView fx:id=\"tableAddFriends\" layoutX=\"33.0\" layoutY=\"76.0\" prefHeight=\"200.0\" prefWidth=\"225.0\">\r\n        <columns>\r\n          <TableColumn fx:id=\"addFirstName\" prefWidth=\"113.33333969116211\" text=\"First name\" />\r\n          <TableColumn fx:id=\"addLastName\" prefWidth=\"110.66667175292969\" text=\"Last name\" />\r\n        </columns>\r\n      </TableView>\r\n      <TextField fx:id=\"txtSearch\" layoutX=\"106.0\" layoutY=\"33.0\" />\r\n      <Button layoutX=\"41.0\" layoutY=\"285.0\" mnemonicParsing=\"false\" onAction=\"#handleBack\" text=\"Back\" />\r\n   </children>\r\n</AnchorPane>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build/resources/main/views/SearchPage.fxml	(revision a2818628599f3671ed21a7f29ceaf5690ea2cae0)
++++ build/resources/main/views/SearchPage.fxml	(date 1606934156544)
+@@ -5,7 +5,7 @@
+ 
+ <AnchorPane prefHeight="325.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.SearchController">
+    <children>
+-      <Button layoutX="185.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleAddFriend" text="Add friend" />
++      <Button layoutX="33.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleAddFriend" text="Add friend" />
+       <Label layoutX="33.0" layoutY="37.0" prefHeight="17.0" prefWidth="52.0" text="Search:" />
+       <TableView fx:id="tableAddFriends" layoutX="33.0" layoutY="76.0" prefHeight="200.0" prefWidth="225.0">
+         <columns>
+@@ -14,6 +14,6 @@
+         </columns>
+       </TableView>
+       <TextField fx:id="txtSearch" layoutX="106.0" layoutY="33.0" />
+-      <Button layoutX="41.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
++      <Button layoutX="217.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
+    </children>
+ </AnchorPane>

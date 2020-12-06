@@ -65,8 +65,8 @@ public class SearchController {
     }
 
     private void initializeUsersTable() {
-        addFirstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
-        addLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
+        addFirstName.setCellValueFactory(new PropertyValueFactory<>("StringUser"));
+        //addLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
         tableAddFriends.setItems(usersTableModel);
     }
 
@@ -134,7 +134,7 @@ public class SearchController {
 
         MessageController messageController = loader.getController();
         messageController.setService(messageService, user, toCommunicate, newStage);
-
+        newStage.setTitle("MeetLy");
         newStage.show();
     }
 

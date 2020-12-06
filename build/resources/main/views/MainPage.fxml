@@ -9,28 +9,23 @@
 
 <AnchorPane prefHeight="362.0" prefWidth="581.0" style="-fx-background-color: #e5d1b8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MainController">
    <children>
-      <TextField fx:id="txtLoggedIn" layoutX="21.0" layoutY="151.0" prefHeight="39.0" prefWidth="116.0" promptText="nume" style="-fx-background-color: #e5d1b8;">
+      <TextField fx:id="txtLoggedIn" layoutX="23.0" layoutY="170.0" prefHeight="39.0" prefWidth="161.0" promptText="nume" style="-fx-background-color: #e5d1b8;">
          <font>
             <Font size="18.0" />
          </font></TextField>
-      <TableView fx:id="tableFriends" layoutX="363.0" layoutY="133.0" prefHeight="207.0" prefWidth="202.0" style="-fx-background-color: #e5d1b8;">
+      <TableView fx:id="tableFriends" layoutX="401.0" layoutY="126.0" prefHeight="210.0" prefWidth="141.39996337890625" style="-fx-background-color: #e5d1b8;">
         <columns>
-          <TableColumn fx:id="friendFirstName" prefWidth="101.00003051757812" style="-fx-background-color: #e5d1b8;" text="First Name" />
-          <TableColumn fx:id="friendLastName" prefWidth="99.66665649414062" style="-fx-background-color: #e5d1b8;" text="Last Name" />
+          <TableColumn fx:id="friendFirstName" prefWidth="141.39996337890625" style="-fx-background-color: #e5d1b8;" text="Online Friends:" />
         </columns>
       </TableView>
-      <Label layoutX="439.0" layoutY="101.0" text="Friends">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font></Label>
       <Button layoutX="157.0" layoutY="61.0" mnemonicParsing="false" onAction="#loadSearchStage" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: #c2956e;" text="Search" textFill="#2b2129" />
       <Button layoutX="23.0" layoutY="231.0" mnemonicParsing="false" onAction="#handleUnfriend" style="-fx-background-color: #c2956e;" text="Remove Friend" textFill="#2b2129" />
       <Button layoutX="522.5" layoutY="-1.0" mnemonicParsing="false" onAction="#logOut" prefHeight="52.0" prefWidth="67.0" style="-fx-background-color: #342A30;" text="Log out" textFill="#e5d1b8" />
       <Button layoutX="23.0" layoutY="265.0" mnemonicParsing="false" onAction="#loadUnsentStage" style="-fx-background-color: #c2956e;" text="Unsend Friend &#10;      Request" textFill="#2b2129" />
       <Button fx:id="idButtonRequest" layoutX="289.0" layoutY="61.0" mnemonicParsing="false" onAction="#loadNotificationRequestStage" prefHeight="25.0" prefWidth="132.0" style="-fx-background-color: #708a81;" text="New friend request" textFill="#2b2129" />
       <Button fx:id="idButtonMessage" layoutX="472.0" layoutY="61.0" mnemonicParsing="false" onAction="#loadNotificationMessageStage" style="-fx-background-color: #708a81;" text="New messages" textFill="#2b2129" />
-      <Button layoutX="23.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleRefresh" style="-fx-background-color: #c2956e;" text="Refresh" textFill="#2b2129" />
-      <ImageView fx:id="idImage" fitHeight="80.0" fitWidth="80.0" layoutX="31.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="23.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleRefresh" prefHeight="26.0" prefWidth="96.0" style="-fx-background-color: #c2956e;" text="Refresh" textFill="#2b2129" />
+      <ImageView fx:id="idImage" fitHeight="80.0" fitWidth="80.0" layoutX="31.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="idImagRequest" fitHeight="30.0" fitWidth="30.0" layoutX="259.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="idImagMessage" fitHeight="30.0" fitWidth="30.0" layoutX="439.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
       <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" graphicTextGap="10.0" layoutY="-2.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.95" prefHeight="54.0" prefWidth="523.0" style="-fx-background-color: #2b2129;" text="MeetLy" textFill="#e5d1b8" textOverrun="LEADING_ELLIPSIS" wrapText="true">
@@ -44,18 +39,18 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Label>
-      <TextField fx:id="txtLoggedIn1" layoutX="23.0" layoutY="190.0" prefHeight="39.0" prefWidth="123.0" promptText="prenume" style="-fx-background-color: #e5d1b8;">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </TextField>
-      <ScrollPane layoutX="159.0" layoutY="129.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #e5d1b8;">
+      <ScrollPane layoutX="191.0" layoutY="129.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #e5d1b8;">
         <content>
-          <AnchorPane fx:id="idScrollPane" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #e5d1b8;">
+          <AnchorPane fx:id="idScrollPane" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="202.0" style="-fx-background-color: #e5d1b8;">
                <children>
                   <ImageView fx:id="idFeed" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                </children></AnchorPane>
         </content>
       </ScrollPane>
+      <Label layoutX="446.0" layoutY="101.0" text="Friends" textFill="#2b2129">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

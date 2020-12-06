@@ -7,7 +7,7 @@
 <AnchorPane prefHeight="315.0" prefWidth="322.0" style="-fx-background-color: #e5d1b8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MessageController">
    <children>
       <TextField fx:id="txtReply" layoutY="240.0" prefHeight="50.0" prefWidth="235.0" promptText="Write a message..." style="-fx-background-color: #e5d1b8;" />
-      <Label fx:id="lblUser" layoutX="-2.0" prefHeight="47.0" prefWidth="330.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="lblUser" layoutX="87.0" prefHeight="47.0" prefWidth="167.0" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="32.0" />
          </font></Label>

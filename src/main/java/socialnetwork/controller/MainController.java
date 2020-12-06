@@ -90,10 +90,10 @@ public class MainController implements Observer {
         setPictureImage();
         setFeed();
 
-        txtLoggedIn.setText(user.getFirstName());
+        txtLoggedIn.setText(user.getFirstName() + " " + user.getLastName());
         txtLoggedIn.setEditable(false);
-        txtLoggedIn1.setText(user.getLastName());
-        txtLoggedIn1.setEditable(false);
+        //txtLoggedIn1.setText(user.getLastName());
+        //txtLoggedIn1.setEditable(false);
 
     }
 
@@ -126,8 +126,8 @@ public class MainController implements Observer {
 
 
     private void initializeFriendsTable() {
-        friendFirstName.setCellValueFactory(new PropertyValueFactory<>("FirstName"));
-        friendLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
+        friendFirstName.setCellValueFactory(new PropertyValueFactory<>("StringUser"));
+       // friendLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
         tableFriends.setItems(friendsTableModel);
     }
 
@@ -210,7 +210,7 @@ public class MainController implements Observer {
 
         SearchController searchController = loader.getController();
         searchController.setService(user, userService, messageService, friendRequestService, newStage);
-
+        newStage.setTitle("MeetLy");
         newStage.show();
     }
 
@@ -224,7 +224,7 @@ public class MainController implements Observer {
 
         NotificationRequestController requestController = loader.getController();
         requestController.setService(friendRequestService, user, newStage);
-
+        newStage.setTitle("MeetLy");
         newStage.show();
     }
 
@@ -238,7 +238,7 @@ public class MainController implements Observer {
 
         NotificationMessageController messageController = loader.getController();
         messageController.setService(messageService, user, newStage);
-
+        newStage.setTitle("MeetLy");
         newStage.show();
     }
 
@@ -252,7 +252,7 @@ public class MainController implements Observer {
 
         UnsentController unsentController = loader.getController();
         unsentController.setService(friendRequestService, user, newStage);
-
+        newStage.setTitle("MeetLy");
         newStage.show();
     }
 
