@@ -101,13 +101,11 @@ public class MainController implements Observer {
 
     private void setFeed() {
         Long userId= user.getId();
-        String path="";
-        path = "/images/page" + userId%7 + ".png";
+        //String path="";
+        String path = "/images/page" + userId%7 + ".png";
         Image image = new Image(path);
         idFeed.setImage(image);
         idFeed.setFitHeight(image.getHeight());
-        //idFeed.setFitWidth(image.getWidth());
-        //idScrollPane.setContent(idFeed);
 
     }
 
@@ -153,7 +151,7 @@ public class MainController implements Observer {
 
     private void notifications(){
 
-        Image image = new Image("/images/bell.png");
+        Image image = new Image("/images/bell3.png");
 
         List<FriendRequest> friendRequests = friendRequestService.getAllFriendRequestsOfAnUser(user.getId());
         if (friendRequests.size()!=0)
