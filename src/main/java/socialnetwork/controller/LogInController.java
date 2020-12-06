@@ -2,11 +2,9 @@ package socialnetwork.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -95,7 +93,7 @@ public class LogInController {
         newStage.setScene(new Scene(layout));
 
         SignUpController signUpController = loader.getController();
-        signUpController.setService(userService);
+        signUpController.setService(userService, stage);
         newStage.setTitle("MeetLy");
         newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();

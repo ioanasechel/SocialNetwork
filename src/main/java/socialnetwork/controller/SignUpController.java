@@ -31,9 +31,9 @@ public class SignUpController {
     UserService userService;
     Stage stage;
 
-    public void setService(UserService userService) {
+    public void setService(UserService userService, Stage stage) {
         this.userService = userService;
-        //this.stage = stage;
+        this.stage = stage;
     }
 
     public void createUser() {
