@@ -70,7 +70,7 @@ public class MainController implements Observer {
     public void setService(UserService userService, FriendshipService friendshipService,
                            MessageService messageService,
                            FriendRequestService friendRequestService,
-                           User user, Stage stage) {
+                           User user, Stage previousStage, Stage stage) {
         this.userService = userService;
         this.friendshipService = friendshipService;
         this.messageService = messageService;
@@ -78,7 +78,7 @@ public class MainController implements Observer {
         friendshipService.addObserver(this);
 
         this.user = user;
-        //this.previousStage = previousStage;
+        this.previousStage = previousStage;
         this.stage = stage;
 
         initFriendshipTableModel();

@@ -48,6 +48,11 @@ public class User extends Entity<Long>{
         return password;
     }
 
+//    public String setPassword(String password) {
+//        String pass= DigestUtils.md5Hex(password);
+//        return pass;
+//    }
+
     public String getStringUser(){
         return "\t" + firstName + " " + lastName;
     }
