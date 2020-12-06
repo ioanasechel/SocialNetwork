@@ -75,7 +75,7 @@ public class SignUpController {
         if (ok.length()==0) {
             createUser();
             showMessage(
-                    null, Alert.AlertType.INFORMATION, "Congratulation", "You have successfully registered! "
+                    stage, Alert.AlertType.INFORMATION, "Congratulation", "You have successfully registered! "
             );
         }
         else {
@@ -83,7 +83,7 @@ public class SignUpController {
                 txtPassword.setText("");
                 txtConfirmPassword.setText("");
             }
-            showErrorMessage(null, ok);
+            showErrorMessage(stage, ok);
         }
     }
 }

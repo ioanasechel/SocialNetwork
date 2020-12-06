@@ -22,8 +22,11 @@ public class ForgotPasswordController {
     User user;
     UserService userService;
 
-    public void setService(UserService userService) {
+    Stage stage;
+
+    public void setService(UserService userService, Stage stage) {
         this.userService = userService;
+        this.stage=stage;
     }
 
     public User getUser() {
@@ -45,14 +48,14 @@ public class ForgotPasswordController {
             User user=getUser();
             if(user!=null){
             showMessage(
-                    null, Alert.AlertType.INFORMATION, "Password", "Your password is "+user.getPassword()
+                    stage, Alert.AlertType.INFORMATION, "Password", "Your password is "+user.getPassword()
             );}
             else{
-                showErrorMessage(null, "This username does not exist");
+                showErrorMessage(stage, "This username does not exist");
             }
         }
         else {
-            showErrorMessage(null, "The username is missing \n");
+            showErrorMessage(stage, "The username is missing \n");
         }
     }
 }

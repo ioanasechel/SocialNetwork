@@ -3,6 +3,7 @@ package socialnetwork;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import socialnetwork.controller.LogInController;
@@ -63,7 +64,7 @@ public class MainApp extends Application {
         loader.setLocation(getClass().getResource("/views/LogInPage.fxml"));
         AnchorPane layout = loader.load();
         primaryStage.setScene(new Scene(layout));
-
+        primaryStage.getIcons().add(new Image("images/app_icon.png"));
         primaryStage.setTitle("MeetLy");
         LogInController loginController = loader.getController();
         loginController.setService(userService, friendshipService, messageService, friendRequestService, primaryStage);

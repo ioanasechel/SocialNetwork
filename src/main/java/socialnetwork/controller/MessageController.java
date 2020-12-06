@@ -91,7 +91,7 @@ public class MessageController implements Observer {
             Message toReply = messageService.replyMessage(selectedMessage.getId(),
                     user.getId(), replyMessage);
         } else {
-            showErrorMessage(null, "You must select a message!");
+            showErrorMessage(stage, "You must select a message!");
         }
     }
 
@@ -121,7 +121,7 @@ public class MessageController implements Observer {
             Message toReply = messageService.replyAll(selectedMessage.getId(),
                     user.getId(), replyMessage);
         } else {
-            showErrorMessage(null, "You must select a message!");
+            showErrorMessage(stage, "You must select a message!");
         }
     }
 

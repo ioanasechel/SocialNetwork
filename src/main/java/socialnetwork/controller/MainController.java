@@ -192,11 +192,11 @@ public class MainController implements Observer {
             Friendship deletedFriendship = friendshipService.deleteFriendship(user.getId(), found.getId());
             if (deletedFriendship != null)
                 showMessage(
-                        null, Alert.AlertType.INFORMATION, "Unfriend", "You have unfriended " + selectedFriend.getFirstName() + " " + selectedFriend.getLastName() +"!"
+                        stage, Alert.AlertType.INFORMATION, "Unfriend", "You have unfriended " + selectedFriend.getFirstName() + " " + selectedFriend.getLastName() +"!"
                 );
         }
         else {
-            showErrorMessage(null, "You must select a friend!");
+            showErrorMessage(stage, "You must select a friend!");
         }
     }
 
@@ -211,6 +211,7 @@ public class MainController implements Observer {
         SearchController searchController = loader.getController();
         searchController.setService(user, userService, messageService, friendRequestService, newStage);
         newStage.setTitle("MeetLy");
+        newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
     }
 
@@ -225,6 +226,7 @@ public class MainController implements Observer {
         NotificationRequestController requestController = loader.getController();
         requestController.setService(friendRequestService, user, newStage);
         newStage.setTitle("MeetLy");
+        newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
     }
 
@@ -239,6 +241,7 @@ public class MainController implements Observer {
         NotificationMessageController messageController = loader.getController();
         messageController.setService(messageService, user, newStage);
         newStage.setTitle("MeetLy");
+        newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
     }
 
@@ -253,6 +256,7 @@ public class MainController implements Observer {
         UnsentController unsentController = loader.getController();
         unsentController.setService(friendRequestService, user, newStage);
         newStage.setTitle("MeetLy");
+        newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
     }
 

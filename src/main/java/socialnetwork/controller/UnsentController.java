@@ -80,11 +80,11 @@ public class UnsentController implements Observer {
             FriendRequest unsentFriendRequest = friendRequestService.unsentFriendRequest(selectedRequest.getId());
             if (unsentFriendRequest == null)
                 showMessage(
-                        null, Alert.AlertType.INFORMATION, "Unsent", "You have deleted the friend request to " + selectedRequest.getTo()+"!"
+                        stage, Alert.AlertType.INFORMATION, "Unsent", "You have deleted the friend request to " + selectedRequest.getTo()+"!"
                 );
         }
         else {
-            showErrorMessage(null, "You must select a request!");
+            showErrorMessage(stage, "You must select a request!");
         }
     }
 

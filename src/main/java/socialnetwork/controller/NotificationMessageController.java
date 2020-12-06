@@ -73,7 +73,7 @@ public class NotificationMessageController implements Observer {
             loadMessageStage(selectedMessage.getFrom());
         }
         else
-            MessageAlert.showErrorMessage(null, "You must select a friend!");
+            MessageAlert.showErrorMessage(stage, "You must select a friend!");
     }
 
     @FXML

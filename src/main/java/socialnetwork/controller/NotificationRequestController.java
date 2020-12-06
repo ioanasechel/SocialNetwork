@@ -76,11 +76,11 @@ public class NotificationRequestController implements Observer {
             FriendRequest acceptedRequest = friendRequestService.changeStatus(selectedRequest.getId(), true);
             if (acceptedRequest == null)
                 showMessage(
-                        null, Alert.AlertType.INFORMATION, "Accept", "You have accepted the friend request from " + selectedRequest.getFrom()+"!"
+                        stage, Alert.AlertType.INFORMATION, "Accept", "You have accepted the friend request from " + selectedRequest.getFrom()+"!"
                 );
         }
         else {
-            showErrorMessage(null, "You must select a request!");
+            showErrorMessage(stage, "You must select a request!");
         }
     }
 
@@ -91,11 +91,11 @@ public class NotificationRequestController implements Observer {
             FriendRequest acceptedRequest = friendRequestService.changeStatus(selectedRequest.getId(), false);
             if (acceptedRequest == null)
                 showMessage(
-                        null, Alert.AlertType.INFORMATION, "Accept", "You have rejected the friend request from " + selectedRequest.getFrom()+"!"
+                        stage, Alert.AlertType.INFORMATION, "Accept", "You have rejected the friend request from " + selectedRequest.getFrom()+"!"
                 );
         }
         else {
-            showErrorMessage(null, "You must select a request!");
+            showErrorMessage(stage, "You must select a request!");
         }
     }
 }

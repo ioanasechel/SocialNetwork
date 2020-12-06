@@ -10,6 +10,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import socialnetwork.domain.FriendRequest;
@@ -102,11 +103,11 @@ public class SearchController {
             FriendRequest fr = friendRequestService.sendFriendRequest(user.getId(), selectedUser.getId());
             if (fr == null)
                 MessageAlert.showMessage(
-                        null, Alert.AlertType.INFORMATION, "Add friend", "You have sent a friend request to " + selectedUser.getFirstName() + " " + selectedUser.getLastName() + "!"
+                        stage, Alert.AlertType.INFORMATION, "Add friend", "You have sent a friend request to " + selectedUser.getFirstName() + " " + selectedUser.getLastName() + "!"
                 );
         }
         else
-            MessageAlert.showErrorMessage(null, "You must select a friend!");
+            MessageAlert.showErrorMessage(stage, "You must select a friend!");
     }
 
     @FXML
@@ -116,7 +117,7 @@ public class SearchController {
             loadMessageStage(selectedUser);
         }
         else
-            MessageAlert.showErrorMessage(null, "You must select a friend!");
+            MessageAlert.showErrorMessage(stage, "You must select a friend!");
     }
 
     @FXML
@@ -135,6 +136,7 @@ public class SearchController {
         MessageController messageController = loader.getController();
         messageController.setService(messageService, user, toCommunicate, newStage);
         newStage.setTitle("MeetLy");
+        newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
     }
 
