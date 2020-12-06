@@ -3,13 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.NotificationMessageController">
+<AnchorPane prefHeight="225.0" prefWidth="303.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.NotificationMessageController">
    <children>
-      <TableView fx:id="tableMessage" layoutX="129.0" layoutY="75.0" prefHeight="200.0" prefWidth="302.0">
+      <TableView fx:id="tableMessage" prefHeight="200.0" prefWidth="303.0" style="-fx-background-color: #e5d1b8;">
         <columns>
-          <TableColumn fx:id="stringMessage" prefWidth="198.6666717529297" text="New messages" />
+          <TableColumn fx:id="stringMessage" prefWidth="300.6666717529297" style="-fx-background-color: #e5d1b8;" text="New messages" />
         </columns>
       </TableView>
-      <Button layoutX="136.0" layoutY="325.0" mnemonicParsing="false" onAction="#handleSendMessage" text="Show in conversation" />
+      <Button layoutY="200.0" mnemonicParsing="false" onAction="#handleSendMessage" prefHeight="25.0" prefWidth="303.0" style="-fx-background-color: #708a81;" text="Show in conversation" />
    </children>
 </AnchorPane>

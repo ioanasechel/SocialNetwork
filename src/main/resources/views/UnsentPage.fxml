@@ -3,15 +3,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="299.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.UnsentController">
+<AnchorPane prefHeight="227.0" prefWidth="314.0" style="-fx-background-color: #e5d1b8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.UnsentController">
    <children>
-      <Button layoutX="27.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleBack" text="Back" />
-      <Button layoutX="287.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleUnsent" text="Unsent" />
-      <TableView fx:id="tableSent" layoutX="27.0" layoutY="29.0" prefHeight="200.0" prefWidth="314.0">
+      <Button layoutX="156.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #708a81;" text="Back" />
+      <Button layoutY="200.0" mnemonicParsing="false" onAction="#handleUnsent" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: #c2956e;" text="Unsent" />
+      <TableView fx:id="tableSent" prefHeight="200.0" prefWidth="314.0">
         <columns>
-          <TableColumn fx:id="sentTo" prefWidth="107.3333511352539" text="To" />
-          <TableColumn fx:id="sentStatus" prefWidth="84.66664123535156" text="Status" />
-            <TableColumn fx:id="sentDate" prefWidth="120.99996948242188" text="Date" />
+          <TableColumn fx:id="sentTo" prefWidth="312.66666662693024" style="-fx-background-color: #e5d1b8;" text="Friend Requests" />
         </columns>
       </TableView>
    </children>

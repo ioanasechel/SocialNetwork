@@ -9,6 +9,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -34,6 +36,8 @@ public class MainController implements Observer {
 
     @FXML
     private TextField txtLoggedIn;
+    @FXML
+    private TextField txtLoggedIn1;
 
     @FXML
     private TableView<User> tableFriends;
@@ -46,6 +50,16 @@ public class MainController implements Observer {
     private Button idButtonRequest;
     @FXML
     private Button idButtonMessage;
+    @FXML
+    private ImageView idImage;
+    @FXML
+    private ImageView idImagMessage;
+    @FXML
+    private ImageView idImagRequest;
+    @FXML
+    private ImageView idFeed;
+//    @FXML
+//    private ScrollPane idScrollPane;
 
     User user;
     UserService userService;
@@ -73,10 +87,30 @@ public class MainController implements Observer {
 
         initFriendshipTableModel();
         notifications();
+        setPictureImage();
+        setFeed();
 
-        txtLoggedIn.setText(user.getFirstName() + " " + user.getLastName());
+        txtLoggedIn.setText(user.getFirstName());
         txtLoggedIn.setEditable(false);
+        txtLoggedIn1.setText(user.getLastName());
+        txtLoggedIn1.setEditable(false);
+
     }
+
+
+
+    private void setFeed() {
+        Long userId= user.getId();
+        String path="";
+        path = "/images/page" + userId%7 + ".png";
+        Image image = new Image(path);
+        idFeed.setImage(image);
+        idFeed.setFitHeight(image.getHeight());
+        //idFeed.setFitWidth(image.getWidth());
+        //idScrollPane.setContent(idFeed);
+
+    }
+
 
     @FXML
     public void logOut() {
@@ -104,25 +138,41 @@ public class MainController implements Observer {
         friendsTableModel.setAll(userFriends);
     }
 
+    private void setPictureImage(){
+        Long userId= user.getId();
+        String path="";
+        if (userId<16)
+            path = "/images/" + userId + ".png";
+        else
+            path="/images/16.png";
+        Image image = new Image(path);
+        idImage.setImage(image);
+
+    }
+
 
     private void notifications(){
+
+        Image image = new Image("/images/bell.png");
+
         List<FriendRequest> friendRequests = friendRequestService.getAllFriendRequestsOfAnUser(user.getId());
         if (friendRequests.size()!=0)
         {
             idButtonRequest.setDisable(false);
             idButtonRequest.setManaged(true);
+            idImagRequest.setImage(image);
         }
         else{
             idButtonRequest.setDisable(true);
             idButtonRequest.setManaged(false);
         }
 
-//        Iterable<Message> allMessages=messageService.getAllMessages();
         List<Message> all=messageService.getNotificationMessage(user.getId());
         if (all.size()>0)
         {
             idButtonMessage.setDisable(false);
             idButtonMessage.setManaged(true);
+            idImagMessage.setImage(image);
         }
         else{
             idButtonMessage.setDisable(true);
@@ -140,7 +190,7 @@ public class MainController implements Observer {
     public void handleUnfriend() throws IOException {
         User selectedFriend = tableFriends.getSelectionModel().getSelectedItem();
         if (selectedFriend != null) {
-            User found = userService.getOne(selectedFriend.getId());
+            User found = userService.getOneUser(selectedFriend.getId());
             Friendship deletedFriendship = friendshipService.deleteFriendship(user.getId(), found.getId());
             if (deletedFriendship != null)
                 showMessage(

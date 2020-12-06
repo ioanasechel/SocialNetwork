@@ -33,22 +33,17 @@ public class FriendRequest extends Entity<Long>{
         return from;
     }
 
-    public String getStringFrom() {
-        return from.getFirstName() + " " + from.getLastName();
-    }
-
-    public String getStringTo() {
-        return to.getFirstName() + " " + to.getLastName();
-    }
-
-    public String getStringDate() {
-        return date.format(Constants.DATE_TIME_FORMATTER);
-    }
 
     public String getStringReceive(){
         return from.getFirstName() + " " + from.getLastName()+
                 " sent you a friend request on " +
                 date.format(Constants.DATE_TIME_FORMATTER);
+    }
+
+    public String getStringSent(){
+        return "You sent a friend request to "+
+                to.getFirstName() + " " + to.getLastName()+"\n"+
+                " on " + date.format(Constants.DATE_TIME_FORMATTER);
     }
 
     /**

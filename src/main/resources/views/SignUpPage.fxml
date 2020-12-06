@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="313.0" prefWidth="357.0" style="-fx-background-color: #E5D1B8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.SignUpController">
+   <children>
+      <Button layoutX="143.0" layoutY="269.0" mnemonicParsing="false" onAction="#handleRegister" style="-fx-background-color: #708A81;" text="Sign up" textFill="#e5d1b8" />
+      <Label layoutX="83.0" layoutY="27.0" prefHeight="33.0" prefWidth="181.0" text="Create an account">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFirstName" layoutX="20.0" layoutY="81.0" promptText="First Name" />
+      <TextField fx:id="txtLastName" layoutX="181.0" layoutY="81.0" promptText="Last Name" />
+      <TextField fx:id="txtUsername" layoutX="20.0" layoutY="130.0" prefHeight="25.0" prefWidth="308.0" promptText="Username" />
+      <PasswordField fx:id="txtPassword" layoutX="20.0" layoutY="176.0" prefHeight="25.0" prefWidth="308.0" promptText="Password" />
+      <PasswordField fx:id="txtConfirmPassword" layoutX="20.0" layoutY="224.0" prefHeight="25.0" prefWidth="308.0" promptText="Confirm password" />
+   </children>
+</AnchorPane>

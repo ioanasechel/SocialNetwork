@@ -32,10 +32,6 @@ public class UnsentController implements Observer {
     private TableView<FriendRequest> tableSent;
     @FXML
     private TableColumn<FriendRequest, String> sentTo;
-    @FXML
-    private TableColumn<FriendRequest, String> sentStatus;
-    @FXML
-    private TableColumn<FriendRequest, String> sentDate;
 
     User user;
     FriendRequestService friendRequestService;
@@ -61,9 +57,7 @@ public class UnsentController implements Observer {
 
 
     private void initializeSentTable() {
-        sentTo.setCellValueFactory(new PropertyValueFactory<>("StringTo"));
-        sentStatus.setCellValueFactory(new PropertyValueFactory<>("Status"));
-        sentDate.setCellValueFactory(new PropertyValueFactory<>("StringDate"));
+        sentTo.setCellValueFactory(new PropertyValueFactory<>("StringSent"));
         tableSent.setItems(sentTableModel);
     }
 

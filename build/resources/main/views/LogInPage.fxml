@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.LogInController">
+<AnchorPane prefHeight="390.0" prefWidth="611.0" style="-fx-background-color: #E2E2E2;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.LogInController">
    <children>
-      <Button layoutX="194.0" layoutY="96.0" mnemonicParsing="false" onAction="#signIn" text="Sign in" />
-      <TextField fx:id="txtId" layoutX="105.0" layoutY="52.0" />
-      <Label fx:id="lblStatus" layoutX="76.0" layoutY="99.0" prefHeight="18.0" prefWidth="109.0" />
-      <Label layoutX="44.0" layoutY="57.0" text="ID" />
-      <Label layoutX="27.0" layoutY="169.0" text="First Name" />
-      <Label layoutX="28.0" layoutY="215.0" text="Last Name" />
-      <TextField fx:id="txtFirstName" layoutX="105.0" layoutY="165.0" />
-      <TextField fx:id="txtLastName" layoutX="105.0" layoutY="211.0" />
-      <Button layoutX="192.0" layoutY="248.0" mnemonicParsing="false" onAction="#signUp" text="Sign up" />
+      <ImageView fx:id="idImage" fitHeight="305.0" fitWidth="254.0" layoutX="69.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+      <AnchorPane layoutX="288.0" layoutY="42.0" prefHeight="305.0" prefWidth="275.0" style="-fx-background-color: #708a81;">
+         <children>
+            <TextField fx:id="txtUsername" layoutX="27.0" layoutY="73.0" prefHeight="25.0" prefWidth="223.0" promptText="Username" style="-fx-background-color: #E2E2E2;" />
+            <PasswordField fx:id="txtPassword" layoutX="27.0" layoutY="109.0" prefHeight="25.0" prefWidth="223.0" promptText="Password" style="-fx-background-color: #E2E2E2;" />
+            <Button layoutX="109.0" layoutY="153.0" mnemonicParsing="false" onAction="#signIn" style="-fx-background-color: #e5d1b8;" text="Sign in" />
+            <Button layoutX="110.0" layoutY="233.0" mnemonicParsing="false" onAction="#handleSignUp" style="-fx-background-color: #e5d1b8;" text="Sign up" />
+            <Label fx:id="lblStatus" layoutX="75.0" layoutY="14.0" prefHeight="28.0" prefWidth="119.0" text="  Welcome" textAlignment="CENTER" textFill="#e5d1b8" wrapText="true">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font></Label>
+            <Label layoutX="60.0" layoutY="205.0" text="Don't have an account?" textFill="#e5d1b8">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+            <Button layoutX="84.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleForgotPassword" style="-fx-background-color: #708A81;" text="Forgot Password?" textFill="#e5d1b8" underline="true" />
+
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

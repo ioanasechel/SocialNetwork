@@ -4,20 +4,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="315.0" prefWidth="322.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MessageController">
+<AnchorPane prefHeight="315.0" prefWidth="322.0" style="-fx-background-color: #e5d1b8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.MessageController">
    <children>
-      <TextField fx:id="txtReply" layoutY="240.0" prefHeight="50.0" prefWidth="235.0" />
-      <Label fx:id="lblUser" layoutX="55.0" prefHeight="35.0" prefWidth="200.0" text="Label">
+      <TextField fx:id="txtReply" layoutY="240.0" prefHeight="50.0" prefWidth="235.0" promptText="Write a message..." style="-fx-background-color: #e5d1b8;" />
+      <Label fx:id="lblUser" layoutX="55.0" prefHeight="35.0" prefWidth="200.0">
          <font>
             <Font size="32.0" />
          </font></Label>
-      <TableView fx:id="tableMessage" layoutY="40.0" prefHeight="200.0" prefWidth="322.0">
+      <TableView fx:id="tableMessage" layoutY="40.0" prefHeight="200.0" prefWidth="322.0" style="-fx-background-color: #e5d1b8;">
         <columns>
-          <TableColumn fx:id="txtMessage" prefWidth="320.6666717529297" text="Messages" />
+          <TableColumn fx:id="txtMessage" prefWidth="320.6666717529297" style="-fx-background-color: #e5d1b8;" text="Messages" />
         </columns>
       </TableView>
-      <Button fx:id="idButtonReply" layoutX="-1.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleReply" prefHeight="25.0" prefWidth="167.0" text="Reply" />
-      <Button fx:id="idButtonReplyAll" layoutX="166.0" layoutY="289.0" mnemonicParsing="false" onAction="#handeReplyAll" prefHeight="25.0" prefWidth="155.0" text="Reply all" />
-      <Button layoutX="236.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleSendMessage" prefHeight="50.0" prefWidth="86.0" text="Send" />
+      <Button fx:id="idButtonReply" layoutX="-1.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleReply" prefHeight="25.0" prefWidth="167.0" style="-fx-background-color: #708a81;" text="Reply" textFill="#2b2129" />
+      <Button fx:id="idButtonReplyAll" layoutX="166.0" layoutY="289.0" mnemonicParsing="false" onAction="#handeReplyAll" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: #708a81;" text="Reply all" />
+      <Button layoutX="236.0" layoutY="240.0" mnemonicParsing="false" onAction="#handleSendMessage" prefHeight="47.0" prefWidth="88.0" style="-fx-background-color: #c2956e;" text="Send" />
    </children>
 </AnchorPane>

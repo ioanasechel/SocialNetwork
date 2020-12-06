@@ -46,8 +46,8 @@ public class UserService {
      * @param lastName the user second name
      * @return user User
      */
-    public User addUser(String firstName, String lastName) {
-        User user=new User(firstName, lastName);
+    public User addUser(String firstName, String lastName, String username, String password) {
+        User user=new User(firstName, lastName, username, password);
         user.setId(generateUserId());
         User rez = repoUser.save(user);
         return rez;
@@ -116,20 +116,37 @@ public class UserService {
         return repoUser.findOne(id) != null;
     }
 
-    public User getOne(Long id) {
-        return repoUser.findOne(id);
-
-    }
-
-    public User getUser(String firstName, String lastName) {
+    public User getOne(String username) {
         Iterable<User> users=getAllUsers();
         List<User> all=new ArrayList<>();
         users.forEach(user1 -> {all.add(user1);});
         List<User> rez=all.stream().
-                filter(user->user.getFirstName().equals(firstName) && user.getLastName().equals(lastName))
+                filter(user->user.getUsername().equals(username))
                 .collect(Collectors.toList());
-        User user=rez.get(rez.size()-1);
-        return user;
+        if (rez.size() != 0) {
+            User user=rez.get(rez.size()-1);
+            return user;
+        }else
+            return null;
+    }
+
+    public User getUser(String username, String password) {
+        Iterable<User> users=getAllUsers();
+        List<User> all=new ArrayList<>();
+        users.forEach(user1 -> {all.add(user1);});
+        List<User> rez=all.stream().
+                filter(user->user.getUsername().equals(username)
+                        && user.getPassword().equals(password))
+                .collect(Collectors.toList());
+        if (rez.size() != 0) {
+            User user=rez.get(rez.size()-1);
+            return user;
+        }else
+            return null;
+    }
+
+    public User getOneUser(Long id) {
+        return repoUser.findOne(id);
     }
 }
 
