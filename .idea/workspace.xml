@@ -29,8 +29,190 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2587a5dd-255d-4b3d-8a11-6fb5f4b4f967" name="Default Changelist" comment="added files">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_codec_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2020_3_21_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2020_3_21_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_06_12_2020_3_21_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_12_2020_8_35_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_12_2020_8_35_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_12_2020_8_35_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]1/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]1/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]1/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]1/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]1/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]1/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM_[Default_Changelist]1/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_12_2020_4_13_PM__Default_Changelist_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2020_3_44_PM_[Default_Changelist]/MessageAlert.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2020_3_44_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2020_3_44_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_12_2020_3_46_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_5_13_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_5_13_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_3_2020_5_13_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_3_58_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_3_58_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_3_58_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/MainApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/MainApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/buildOutputCleanup.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/javaCompile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM_[Default_Changelist]1/taskHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_12_6_2020_5_32_PM__Default_Changelist_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/ForgotPasswordController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/MessageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/NotificationMessageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/NotificationRequestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/SignUpController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/UnsentController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/utils/events/ChangeMessageEventType.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/utils/events/MessageChangeEvent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/app_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/bell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/bell2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/bell3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/first.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/page0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/page1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/page2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/page3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/page4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/page5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/images/page6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/views/ForgotPasswordPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/views/MessagePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/views/NotificationMessagePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/views/NotificationRequestPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/views/SignUpPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/resources/main/views/UnsentPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/ForgotPasswordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/NotificationMessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/NotificationRequestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/UnsentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/utils/events/ChangeMessageEventType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/utils/events/MessageChangeEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/app_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/bell.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/bell2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/bell3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/first.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/page0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/page1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/page2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/page3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/page4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/page5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/page6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/ForgotPasswordPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/MessagePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/NotificationMessagePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/NotificationRequestPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/SignUpPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/views/UnsentPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/LogInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/LogInController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/MessageAlert.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/MessageAlert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/domain/FriendRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/domain/FriendRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/domain/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/domain/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/repository/file/UserFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/repository/file/UserFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/service/FriendRequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/service/FriendRequestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/service/MessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/utils/events/ChangeFriendRequestEventType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/utils/events/ChangeFriendRequestEventType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/views/LogInPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/views/LogInPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/views/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/views/MainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/views/SearchPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/views/SearchPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/friendRequest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/friendRequest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/friendship.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/friendship.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/messages.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/messages.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/LogInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MessageAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MessageAlert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/domain/FriendRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/domain/FriendRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/repository/file/UserFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/repository/file/UserFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/service/FriendRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/service/FriendRequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/utils/events/ChangeFriendRequestEventType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/utils/events/ChangeFriendRequestEventType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/utils/events/FriendRequestChangeEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/utils/events/FriendRequestChangeEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/LogInPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/LogInPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/MainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/SearchPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/SearchPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,13 +317,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,6 +391,7 @@
       <workItem from="1607198407284" duration="2635000" />
       <workItem from="1607201143032" duration="4905000" />
       <workItem from="1607251914971" duration="4154000" />
+      <workItem from="1607436484454" duration="630000" />
     </task>
     <task id="LOCAL-00001" summary="Changed log in ID label">
       <created>1606928817931</created>
@@ -327,7 +512,8 @@
     <MESSAGE value="era o eroare la sign up si acum e ok" />
     <MESSAGE value="la sign up nu era ok la inchiderea ferestrei" />
     <MESSAGE value="am schimbat 1-2 useri si parole" />
-    <option name="LAST_COMMIT_MESSAGE" value="am schimbat 1-2 useri si parole" />
+    <MESSAGE value="??" />
+    <option name="LAST_COMMIT_MESSAGE" value="??" />
   </component>
   <component name="WindowStateProjectService">
     <state x="362" y="0" key="#Project_Structure" timestamp="1606931011761">
