@@ -36,15 +36,11 @@ public class MainController implements Observer {
 
     @FXML
     private TextField txtLoggedIn;
-    @FXML
-    private TextField txtLoggedIn1;
 
     @FXML
     private TableView<User> tableFriends;
     @FXML
     private TableColumn<User, String> friendFirstName;
-    @FXML
-    private TableColumn<User, String> friendLastName;
 
     @FXML
     private Button idButtonRequest;
@@ -92,16 +88,12 @@ public class MainController implements Observer {
 
         txtLoggedIn.setText(user.getFirstName() + " " + user.getLastName());
         txtLoggedIn.setEditable(false);
-        //txtLoggedIn1.setText(user.getLastName());
-        //txtLoggedIn1.setEditable(false);
-
     }
 
 
 
     private void setFeed() {
         Long userId= user.getId();
-        //String path="";
         String path = "/images/page" + userId%7 + ".png";
         Image image = new Image(path);
         idFeed.setImage(image);
@@ -127,7 +119,6 @@ public class MainController implements Observer {
 
     private void initializeFriendsTable() {
         friendFirstName.setCellValueFactory(new PropertyValueFactory<>("StringUser"));
-       // friendLastName.setCellValueFactory(new PropertyValueFactory<>("LastName"));
         tableFriends.setItems(friendsTableModel);
     }
 

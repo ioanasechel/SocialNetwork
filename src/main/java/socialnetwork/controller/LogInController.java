@@ -2,11 +2,9 @@ package socialnetwork.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -20,6 +18,8 @@ import socialnetwork.service.MessageService;
 import socialnetwork.service.UserService;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class LogInController {
     @FXML
@@ -63,19 +63,19 @@ public class LogInController {
         loader.setLocation(getClass().getResource("/views/MainPage.fxml"));
         AnchorPane layout = loader.load();
         newStage.setScene(new Scene(layout));
-
-        MainController mainController = loader.getController();
-        mainController.setService(userService, friendshipService, messageService, friendRequestService, user, stage, newStage);
         newStage.setTitle("MeetLy");
         newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
+
+        MainController mainController = loader.getController();
+        mainController.setService(userService, friendshipService, messageService, friendRequestService, user, stage, newStage);
     }
 
     @FXML
     public void signIn() throws IOException {
         if (txtUsername.getText().length()!=0 &&
                 txtPassword.getText().length()!=0
-                && userService.getUser(txtUsername.getText(), txtPassword.getText())!=null) {
+                && userService.getUser(txtUsername.getText(), hashPassword(txtPassword.getText()))!=null) {
             initializeUser();
             loadMainStage();
             stage.close();
@@ -95,7 +95,7 @@ public class LogInController {
         newStage.setScene(new Scene(layout));
 
         SignUpController signUpController = loader.getController();
-        signUpController.setService(userService);
+        signUpController.setService(userService, newStage);
         newStage.setTitle("MeetLy");
         newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
@@ -110,9 +110,28 @@ public class LogInController {
         newStage.setScene(new Scene(layout));
 
         ForgotPasswordController forgotPasswordController = loader.getController();
-        forgotPasswordController.setService(userService, stage);
+        forgotPasswordController.setService(userService, stage, newStage);
         newStage.setTitle("MeetLy");
         newStage.getIcons().add(new Image("images/app_icon.png"));
         newStage.show();
+    }
+
+    public String hashPassword(String password){
+        String passwordToHash=password;
+        String generatedPassword=null;
+        try{
+            MessageDigest md=MessageDigest.getInstance("MD5");
+            md.update(passwordToHash.getBytes());
+            byte[] bytes=md.digest();
+            StringBuilder sb=new StringBuilder();
+            for (int i=0; i<bytes.length; i++){
+                sb.append(Integer.toString((bytes[i]&0xff)+0x100,32).substring(1));
+            }
+            generatedPassword=sb.toString();
+            return generatedPassword;
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

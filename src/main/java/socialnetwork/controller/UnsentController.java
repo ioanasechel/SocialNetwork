@@ -3,24 +3,17 @@ package socialnetwork.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import socialnetwork.domain.FriendRequest;
-import socialnetwork.domain.Friendship;
 import socialnetwork.domain.User;
 import socialnetwork.service.FriendRequestService;
 import socialnetwork.utils.events.Event;
-import socialnetwork.utils.events.FriendRequestChangeEvent;
-import socialnetwork.utils.events.FriendshipChangeEvent;
 import socialnetwork.utils.observer.Observer;
 
-import java.io.IOException;
 import java.util.List;
 
 import static socialnetwork.controller.MessageAlert.showErrorMessage;

@@ -18,7 +18,6 @@ import socialnetwork.utils.events.Event;
 import socialnetwork.utils.observer.Observer;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class NotificationMessageController implements Observer {

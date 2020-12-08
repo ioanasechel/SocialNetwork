@@ -28,8 +28,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2587a5dd-255d-4b3d-8a11-6fb5f4b4f967" name="Default Changelist" comment="added new users, friendships and friend requests">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/app_icon.png" afterDir="false" />
+    <list default="true" id="2587a5dd-255d-4b3d-8a11-6fb5f4b4f967" name="Default Changelist" comment="added files">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_codec_1_14.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -38,23 +38,21 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/ForgotPasswordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/ForgotPasswordController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/LogInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/LogInController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/controller/SignUpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/socialnetwork/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/views/ForgotPasswordPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/views/ForgotPasswordPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/friendRequest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/friendRequest.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/friendship.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/friendship.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/ForgotPasswordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/ForgotPasswordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/LogInController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MessageAlert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MessageAlert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/MessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/NotificationMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/NotificationMessageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/NotificationRequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/NotificationRequestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/UnsentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/controller/UnsentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/socialnetwork/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/socialnetwork/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/views/ForgotPasswordPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/ForgotPasswordPage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,17 +119,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/images" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/javafx-sdk-11.0.2/commons-codec-1.14.jar" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.25113636" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Documents\facultate\# An 2 Semestrul 1\Metode avansate de programare\Laborator\io\src\main\resources\images" />
-      <recent name="D:\__MAP\WORKSPACE\proiect-lab-schelet" />
-      <recent name="D:\__MAP\WORKSPACE\proiect-lab-schelet\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="socialnetwork.controller" />
+      <recent name="socialnetwork.domain.validators" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java\SocialNetwork\src\main\resources\images" />
@@ -140,9 +137,10 @@
       <recent name="D:\__MAP\WORKSPACE\proiect-lab-schelet\data" />
       <recent name="D:\__MAP\WORKSPACE\proiect-lab-schelet\src\test\resources" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="socialnetwork.controller" />
-      <recent name="socialnetwork.domain.validators" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Documents\facultate\# An 2 Semestrul 1\Metode avansate de programare\Laborator\io\src\main\resources\images" />
+      <recent name="D:\__MAP\WORKSPACE\proiect-lab-schelet" />
+      <recent name="D:\__MAP\WORKSPACE\proiect-lab-schelet\src\main\resources" />
     </key>
   </component>
   <component name="RunManager">
@@ -277,7 +275,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607263068288</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="era o eroare la sign up si acum e ok">
+      <created>1607269043915</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607269043915</updated>
+    </task>
+    <task id="LOCAL-00010" summary="la sign up nu era ok la inchiderea ferestrei">
+      <created>1607277412828</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607277412828</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +328,9 @@
     <MESSAGE value="gui nou" />
     <MESSAGE value="modificare interfata" />
     <MESSAGE value="am schimbat tabelele de prieteni si de search, am adaugat numele aplicatiei la toate ferestrele" />
-    <option name="LAST_COMMIT_MESSAGE" value="am schimbat tabelele de prieteni si de search, am adaugat numele aplicatiei la toate ferestrele" />
+    <MESSAGE value="era o eroare la sign up si acum e ok" />
+    <MESSAGE value="la sign up nu era ok la inchiderea ferestrei" />
+    <option name="LAST_COMMIT_MESSAGE" value="la sign up nu era ok la inchiderea ferestrei" />
   </component>
   <component name="WindowStateProjectService">
     <state x="362" y="0" key="#Project_Structure" timestamp="1606931011761">
@@ -333,11 +347,11 @@
     </state>
     <state x="666" y="311" key="#com.intellij.fileTypes.FileTypeChooser/-1920.8.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1603049164108" />
     <state x="444" y="203" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1604142350672" />
-    <state x="481" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1607087236228">
+    <state x="481" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1607277771066">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="721" y="171" key="#com.intellij.ide.util.MemberChooser/-1920.8.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1603056039200" />
-    <state x="481" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1607087236228" />
+    <state x="481" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1607277771066" />
     <state x="375" y="185" width="531" height="373" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606837271978">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -362,33 +376,33 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="404" y="186" key="DetectedRootsChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1606739411210" />
-    <state x="368" y="37" key="FileChooserDialogImpl" timestamp="1607105502788">
+    <state x="368" y="37" key="FileChooserDialogImpl" timestamp="1607278878646">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="368" y="37" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607105502788" />
-    <state width="1493" height="61" key="GridCell.Tab.0.bottom" timestamp="1607264411445">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="368" y="37" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607278878646" />
+    <state width="1225" height="231" key="GridCell.Tab.0.bottom" timestamp="1607286864636">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1865" height="355" key="GridCell.Tab.0.bottom/-1920.8.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1603056093883" />
-    <state width="1225" height="160" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607260342990" />
+    <state width="1225" height="231" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607286864636" />
     <state width="1493" height="61" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1607264411445" />
-    <state width="1493" height="61" key="GridCell.Tab.0.center" timestamp="1607264411445">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1225" height="231" key="GridCell.Tab.0.center" timestamp="1607286864636">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1865" height="355" key="GridCell.Tab.0.center/-1920.8.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1603056093883" />
-    <state width="1225" height="160" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607260342990" />
+    <state width="1225" height="231" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607286864636" />
     <state width="1493" height="61" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1607264411445" />
-    <state width="1493" height="61" key="GridCell.Tab.0.left" timestamp="1607264411445">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1225" height="231" key="GridCell.Tab.0.left" timestamp="1607286864636">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1865" height="355" key="GridCell.Tab.0.left/-1920.8.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1603056093882" />
-    <state width="1225" height="160" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607260342990" />
+    <state width="1225" height="231" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607286864636" />
     <state width="1493" height="61" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1607264411445" />
-    <state width="1493" height="61" key="GridCell.Tab.0.right" timestamp="1607264411445">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1225" height="231" key="GridCell.Tab.0.right" timestamp="1607286864636">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1865" height="355" key="GridCell.Tab.0.right/-1920.8.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1603056093883" />
-    <state width="1225" height="160" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607260342990" />
+    <state width="1225" height="231" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607286864636" />
     <state width="1493" height="61" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1607264411445" />
     <state width="1225" height="303" key="GridCell.Tab.1.bottom" timestamp="1606852628148">
       <screen x="0" y="0" width="1280" height="680" />
@@ -410,20 +424,24 @@
     </state>
     <state width="1865" height="331" key="GridCell.Tab.1.right/-1920.8.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1603055765062" />
     <state width="1225" height="303" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1606852628148" />
-    <state x="0" y="0" key="SettingsEditor" timestamp="1606931485155">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1607278890398">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="0" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1606739418872" />
+    <state x="0" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607278890398" />
     <state x="0" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606931485155" />
     <state x="657" y="326" key="VCS.EditChangelistDialog" timestamp="1606928237130">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="657" y="326" key="VCS.EditChangelistDialog/0.0.1536.824@0.0.1536.824" timestamp="1606928237130" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1607263073620">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="266" y="17" key="Vcs.Push.Dialog.v2" timestamp="1607277422470">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="266" y="17" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1607257653050" />
+    <state x="266" y="17" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1607277422470" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607263073620" />
+    <state x="418" y="236" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607277087751">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="418" y="236" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1607277087751" />
     <state x="357" y="108" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603801179253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
